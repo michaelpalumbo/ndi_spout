@@ -1,0 +1,376 @@
+Command: "uv" --capture-filter preview -t decklink -d multiplier:sdl#preview --control-port 8888 
+
+UltraGrid 1.5 (tags/v1.5^0 rev 7b5e97db built Jan 27 2020 06:00:16)
+
+Display device   : multiplier
+Capture device   : decklink
+Audio capture    : none
+Audio playback   : none
+MTU              : 9000 B
+Video compression: none
+Audio codec      : PCM
+Network protocol : UltraGrid RTP
+Audio FEC        : none
+Video FEC        : none
+
+sdl
+[SDL] Using driver: windows
+SDL2 initialized successfully.
+preview
+Display initialized-multiplier
+[SDL] Reconfigure to size 512x512
+[SDL] Using renderer: direct3d
+[DeckLink] Auto-choosen device 0.
+Using device DeckLink Mini Monitor
+Could not obtain the IDeckLinkInput interface: interface was not found
+Unable to start video capture device decklink
+Unable to open capture device: decklink
+Exit
+Command: "uv" --capture-filter preview -t decklink -d preview --control-port 8888 
+
+UltraGrid 1.5 (tags/v1.5^0 rev 7b5e97db built Jan 27 2020 06:00:16)
+
+Display device   : preview
+Capture device   : decklink
+Audio capture    : none
+Audio playback   : none
+MTU              : 9000 B
+Video compression: none
+Audio codec      : PCM
+Network protocol : UltraGrid RTP
+Audio FEC        : none
+Video FEC        : none
+
+Display initialized-preview
+[DeckLink] Auto-choosen device 0.
+Using device DeckLink Mini Monitor
+Could not obtain the IDeckLinkInput interface: interface was not found
+Unable to start video capture device decklink
+Unable to open capture device: decklink
+Exit
+Command: "uv" -t decklink --control-port 8888 
+
+UltraGrid 1.5 (tags/v1.5^0 rev 7b5e97db built Jan 27 2020 06:00:16)
+
+Display device   : none
+Capture device   : decklink
+Audio capture    : none
+Audio playback   : none
+MTU              : 1500 B
+Video compression: none
+Audio codec      : PCM
+Network protocol : UltraGrid RTP
+Audio FEC        : none
+Video FEC        : none
+
+Display initialized-none
+[DeckLink] Auto-choosen device 0.
+Using device DeckLink Mini Monitor
+Could not obtain the IDeckLinkInput interface: interface was not found
+Unable to start video capture device decklink
+Unable to open capture device: decklink
+Exit
+Command: "uv" -t aja --control-port 8888 
+
+[AJA cap.] No devices found!
+UltraGrid 1.5 (tags/v1.5^0 rev 7b5e97db built Jan 27 2020 06:00:16)
+
+Display device   : none
+Capture device   : aja
+Audio capture    : none
+Audio playback   : none
+MTU              : 1500 B
+Video compression: none
+Audio codec      : PCM
+Network protocol : UltraGrid RTP
+Audio FEC        : none
+Video FEC        : none
+
+Display initialized-none
+Unable to start video capture device aja
+Unable to open capture device: aja
+Exit
+Command: "uv" -t decklink --control-port 8888 
+
+UltraGrid 1.5 (tags/v1.5^0 rev 7b5e97db built Jan 27 2020 06:00:16)
+
+Display device   : none
+Capture device   : decklink
+Audio capture    : none
+Audio playback   : none
+MTU              : 1500 B
+Video compression: none
+Audio codec      : PCM
+Network protocol : UltraGrid RTP
+Audio FEC        : none
+Video FEC        : none
+
+Display initialized-none
+[DeckLink] Auto-choosen device 0.
+Using device DeckLink Mini Monitor
+Could not obtain the IDeckLinkInput interface: interface was not found
+Unable to start video capture device decklink
+Unable to open capture device: decklink
+Exit
+Command: "uv" --help
+
+
+Usage: uv [options] address
+
+Options:
+
+	-h|--fullhelp              	show usage (basic/full)
+
+	-d <display_device>        	select display device, use '-d help'
+	                         	to get list of supported devices
+
+	-t <capture_device>        	select capture device, use '-t help'
+	                         	to get list of supported devices
+
+	-c <cfg>                 	video compression (see '-c help')
+
+	-r <playback_device>     	Audio playback device (see '-r help')
+
+	-s <capture_device>      	Audio capture device (see '-s help')
+
+	-f [A:|V:]<settings>     	FEC settings (audio or video) - use "none"
+	                         	"mult:<nr>",
+	                         	"ldgm:<max_expected_loss>%" or
+	                         	"ldgm:<k>:<m>:<c>"
+
+	-P <port> | <video_rx>:<video_tx>[:<audio_rx>:<audio_tx>]
+	                         	<port> is base port number, also 3 subsequent
+	                         	ports can be used for RTCP and audio
+	                         	streams. Default: 5004.
+	                         	You can also specify all two or four ports
+	                         	directly.
+
+	-l <limit_bitrate> | unlimited | auto	limit sending bitrate
+	                         	to <limit_bitrate> (with optional k/M/G suffix)
+
+	--audio-capture-format <fmt>|help format of captured audio
+
+	--audio-codec <codec>[:sample_rate=<sr>][:bitrate=<br>]|help	audio codec
+
+	--cuda-device <index>|help	use specified CUDA device
+
+	--encryption <passphrase>	Key material for encryption
+
+	--playback <directory>   	replays captured recorded
+
+	--record[=<directory>]   	record captured audio and video
+
+	address                  	destination address
+
+
+Command: "uv" -t --help
+
+UltraGrid 1.5 (tags/v1.5^0 rev 7b5e97db built Jan 27 2020 06:00:16)
+
+Display device   : none
+Capture device   : --help
+Audio capture    : none
+Audio playback   : none
+MTU              : 1500 B
+Video compression: none
+Audio codec      : PCM
+Network protocol : UltraGrid RTP
+Audio FEC        : none
+Video FEC        : none
+
+Display initialized-none
+WARNING: Selected '--help' capture card was not found.
+Unable to open capture device: --help
+Exit
+Command: "uv" -t decklink:help
+
+UltraGrid 1.5 (tags/v1.5^0 rev 7b5e97db built Jan 27 2020 06:00:16)
+
+Display device   : none
+Capture device   : decklink
+Audio capture    : none
+Audio playback   : none
+MTU              : 1500 B
+Video compression: none
+Audio codec      : PCM
+Network protocol : UltraGrid RTP
+Audio FEC        : none
+Video FEC        : none
+
+Display initialized-none
+
+Decklink options:
+	-t decklink[:<device_index(indices)>[:<mode>:<colorspace>[:3D][:sync_timecode][:connection=<input>][:audio_level={line|mic}][:detect-format][:conversion=<conv_mode>]]
+		or
+	-t decklink{:mode=<mode>|:device=<device_index>|:codec=<colorspace>...<key>=<val>}*
+	(Mode specification is mandatory if your card does not support format autodetection.)
+
+Available Colorspaces:
+	UYVY
+	v210
+	RGBA
+	R10k
+
+3D
+	Use this to capture 3D from supported card (eg. DeckLink HD 3D Extreme).
+	Do not use it for eg. Quad or Duo. Availability of the mode is indicated
+	in video format listing above ("supports 3D").
+
+sync_timecode
+	Try to synchronize inputs based on timecode (for multiple inputs, eg. tiled 4K)
+
+audio_level
+	line - the selected analog input gain levels are used
+	mic - analog audio levels are set to maximum gain on audio input.
+
+conversion
+	none - No video input conversion
+	10lb - HD1080 to SD video input down conversion
+	10am - Anamorphic from HD1080 to SD video input down conversion
+	72lb - Letter box from HD720 to SD video input down conversion
+	72ab - Letterbox video input up conversion
+	amup - Anamorphic video input up conversion
+Then use the set the resulting mode (!) for capture, eg. for 1080p to PAL conversion:
+	-t decklink:mode=pal:conversion=10lb
+
+detect-format
+	Try to detect input video format even if the device doesn't support autodetect.
+	Source interface still has to be given, eg. "-t decklink:connection=HDMI:detect-format".
+p_not_i
+	Incoming signal should be treated as progressive even if detected as interlaced (PsF).
+[no]passthrough
+	Enable/disable capture passthrough.
+
+
+device: 0.) DeckLink Mini Monitor 
+
+Device doesn't support video capture.
+
+Connection can be one of following (not required):
+
+device: 1.) DeckLink Mini Recorder (1) 
+
+capture modes:
+ 0 (ntsc)) NTSC                 	 720 x 486 	 29.97 FPS
+ 1 (pal )) PAL                  	 720 x 576 	 25.00 FPS
+ 2 (ntsp)) NTSC Progressive     	 720 x 486 	 59.94 FPS
+ 3 (palp)) PAL Progressive      	 720 x 576 	 50.00 FPS
+ 4 (23ps)) 1080p23.98           	 1920 x 1080 	 23.98 FPS
+ 5 (24ps)) 1080p24              	 1920 x 1080 	 24.00 FPS
+ 6 (Hp25)) 1080p25              	 1920 x 1080 	 25.00 FPS
+ 7 (Hp29)) 1080p29.97           	 1920 x 1080 	 29.97 FPS
+ 8 (Hp30)) 1080p30              	 1920 x 1080 	 30.00 FPS
+ 9 (Hi50)) 1080i50              	 1920 x 1080 	 25.00 FPS
+10 (Hi59)) 1080i59.94           	 1920 x 1080 	 29.97 FPS
+11 (Hi60)) 1080i60              	 1920 x 1080 	 30.00 FPS
+12 (hp50)) 720p50               	 1280 x 720 	 50.00 FPS
+13 (hp59)) 720p59.94            	 1280 x 720 	 59.94 FPS
+14 (hp60)) 720p60               	 1280 x 720 	 60.00 FPS
+
+Connection can be one of following (not required):
+	SDI
+	HDMI
+
+device: 2.) DeckLink Mini Recorder (2) 
+
+capture modes:
+ 0 (ntsc)) NTSC                 	 720 x 486 	 29.97 FPS
+ 1 (pal )) PAL                  	 720 x 576 	 25.00 FPS
+ 2 (ntsp)) NTSC Progressive     	 720 x 486 	 59.94 FPS
+ 3 (palp)) PAL Progressive      	 720 x 576 	 50.00 FPS
+ 4 (23ps)) 1080p23.98           	 1920 x 1080 	 23.98 FPS
+ 5 (24ps)) 1080p24              	 1920 x 1080 	 24.00 FPS
+ 6 (Hp25)) 1080p25              	 1920 x 1080 	 25.00 FPS
+ 7 (Hp29)) 1080p29.97           	 1920 x 1080 	 29.97 FPS
+ 8 (Hp30)) 1080p30              	 1920 x 1080 	 30.00 FPS
+ 9 (Hi50)) 1080i50              	 1920 x 1080 	 25.00 FPS
+10 (Hi59)) 1080i59.94           	 1920 x 1080 	 29.97 FPS
+11 (Hi60)) 1080i60              	 1920 x 1080 	 30.00 FPS
+12 (hp50)) 720p50               	 1280 x 720 	 50.00 FPS
+13 (hp59)) 720p59.94            	 1280 x 720 	 59.94 FPS
+14 (hp60)) 720p60               	 1280 x 720 	 60.00 FPS
+
+Connection can be one of following (not required):
+	SDI
+	HDMI
+
+device: 3.) DeckLink Mini Recorder (3) 
+
+capture modes:
+ 0 (ntsc)) NTSC                 	 720 x 486 	 29.97 FPS
+ 1 (pal )) PAL                  	 720 x 576 	 25.00 FPS
+ 2 (ntsp)) NTSC Progressive     	 720 x 486 	 59.94 FPS
+ 3 (palp)) PAL Progressive      	 720 x 576 	 50.00 FPS
+ 4 (23ps)) 1080p23.98           	 1920 x 1080 	 23.98 FPS
+ 5 (24ps)) 1080p24              	 1920 x 1080 	 24.00 FPS
+ 6 (Hp25)) 1080p25              	 1920 x 1080 	 25.00 FPS
+ 7 (Hp29)) 1080p29.97           	 1920 x 1080 	 29.97 FPS
+ 8 (Hp30)) 1080p30              	 1920 x 1080 	 30.00 FPS
+ 9 (Hi50)) 1080i50              	 1920 x 1080 	 25.00 FPS
+10 (Hi59)) 1080i59.94           	 1920 x 1080 	 29.97 FPS
+11 (Hi60)) 1080i60              	 1920 x 1080 	 30.00 FPS
+12 (hp50)) 720p50               	 1280 x 720 	 50.00 FPS
+13 (hp59)) 720p59.94            	 1280 x 720 	 59.94 FPS
+14 (hp60)) 720p60               	 1280 x 720 	 60.00 FPS
+
+Connection can be one of following (not required):
+	SDI
+	HDMI
+
+device: 4.) DeckLink Mini Recorder (4) 
+
+capture modes:
+ 0 (ntsc)) NTSC                 	 720 x 486 	 29.97 FPS
+ 1 (pal )) PAL                  	 720 x 576 	 25.00 FPS
+ 2 (ntsp)) NTSC Progressive     	 720 x 486 	 59.94 FPS
+ 3 (palp)) PAL Progressive      	 720 x 576 	 50.00 FPS
+ 4 (23ps)) 1080p23.98           	 1920 x 1080 	 23.98 FPS
+ 5 (24ps)) 1080p24              	 1920 x 1080 	 24.00 FPS
+ 6 (Hp25)) 1080p25              	 1920 x 1080 	 25.00 FPS
+ 7 (Hp29)) 1080p29.97           	 1920 x 1080 	 29.97 FPS
+ 8 (Hp30)) 1080p30              	 1920 x 1080 	 30.00 FPS
+ 9 (Hi50)) 1080i50              	 1920 x 1080 	 25.00 FPS
+10 (Hi59)) 1080i59.94           	 1920 x 1080 	 29.97 FPS
+11 (Hi60)) 1080i60              	 1920 x 1080 	 30.00 FPS
+12 (hp50)) 720p50               	 1280 x 720 	 50.00 FPS
+13 (hp59)) 720p59.94            	 1280 x 720 	 59.94 FPS
+14 (hp60)) 720p60               	 1280 x 720 	 60.00 FPS
+
+Connection can be one of following (not required):
+	SDI
+	HDMI
+
+device: 5.) DeckLink Mini Recorder (5) 
+
+capture modes:
+ 0 (ntsc)) NTSC                 	 720 x 486 	 29.97 FPS
+ 1 (pal )) PAL                  	 720 x 576 	 25.00 FPS
+ 2 (ntsp)) NTSC Progressive     	 720 x 486 	 59.94 FPS
+ 3 (palp)) PAL Progressive      	 720 x 576 	 50.00 FPS
+ 4 (23ps)) 1080p23.98           	 1920 x 1080 	 23.98 FPS
+ 5 (24ps)) 1080p24              	 1920 x 1080 	 24.00 FPS
+ 6 (Hp25)) 1080p25              	 1920 x 1080 	 25.00 FPS
+ 7 (Hp29)) 1080p29.97           	 1920 x 1080 	 29.97 FPS
+ 8 (Hp30)) 1080p30              	 1920 x 1080 	 30.00 FPS
+ 9 (Hi50)) 1080i50              	 1920 x 1080 	 25.00 FPS
+10 (Hi59)) 1080i59.94           	 1920 x 1080 	 29.97 FPS
+11 (Hi60)) 1080i60              	 1920 x 1080 	 30.00 FPS
+12 (hp50)) 720p50               	 1280 x 720 	 50.00 FPS
+13 (hp59)) 720p59.94            	 1280 x 720 	 59.94 FPS
+14 (hp60)) 720p60               	 1280 x 720 	 60.00 FPS
+
+Connection can be one of following (not required):
+	SDI
+	HDMI
+
+Examples:
+	uv -t decklink # captures autodetected video from first DeckLink in system
+	uv -t decklink:0:Hi50:UYVY # captures 1080i50, 8-bit yuv
+	uv -t decklink:0:10:v210:connection=HDMI # captures 10th format from a card (alternative syntax), 10-bit YUV, from HDMI
+	uv -t decklink:mode=23ps # captures 1080p24, 8-bit yuv from first device
+	uv -t "decklink:mode=Hp30:codec=v210:device=DeckLink HD Extreme 3D+" # captures 1080p30, 10-bit yuv from DeckLink HD Extreme 3D+
+
+
+Exit
+Could not obtain the IDeckLinkInput interface: interface was not found
+This UltraGrid version was compiled against DeckLink SDK 10.8. System version is 10.8.4.
